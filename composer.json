@@ -1,0 +1,53 @@
+{
+    "name": "vendorname/laravel-package-skeleton",
+    "description": "Package Description",
+    "keywords": [
+        "vendorname",
+        "laravel-package-skeleton"
+    ],
+    "homepage": "https://github.com/vendorname/laravel-package-skeleton",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dipesh Sukhia",
+            "email": "dipesh.sukhia@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VendorName\\LaravelPackageSkeleton\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VendorName\\LaravelPackageSkeleton\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "VendorName\\LaravelPackageSkeleton\\LaravelPackageSkeletonServiceProvider"
+            ],
+            "aliases": {
+                "LaravelPackageSkeleton": "VendorName\\LaravelPackageSkeleton\\LaravelPackageSkeletonFacade"
+            }
+        }
+    }
+}
